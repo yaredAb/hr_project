@@ -1,0 +1,39 @@
+<h2 class="main-title">Edit Employee Data</h2>
+
+<form class="w-100" [formGroup]="applyForm" (submit)="updateData()">
+    <mat-form-field class="w-100">
+        <mat-label>Full Name</mat-label>
+        <input matInput [value]="employee_data.full_name" formControlName="full_name">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <mat-label>Email</mat-label>
+        <input matInput [value]="employee_data.email" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <mat-label>Phone Number</mat-label>
+        <input matInput [value]="employee_data.phone_number" formControlName="phone_number">
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <mat-label>Company</mat-label>
+        <mat-select [value]="employee_data.company" formControlName="company">
+            <mat-option *ngFor="let company of companyData;let i=index" [value]="company.name">{{company.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <mat-label>Department</mat-label>
+        <mat-select [value]="employee_data.department" formControlName="department">
+            <div *ngFor="let company of companyData;">
+                <mat-option *ngFor="let department of company.department;" [value]="department">{{department}}</mat-option>
+              </div> 
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="w-100">
+        <mat-label>Salary</mat-label>
+        <input matInput [value]="employee_data.salary" type="number" class="example-right-align" placeholder="0" formControlName="salary"/>
+        <span matTextPrefix>$&nbsp;</span>
+    </mat-form-field>
+
+    <button class="submit-btn" type="submit" (click)="updateData()">Update Data</button>
+</form>
+  
+  

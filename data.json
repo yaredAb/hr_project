@@ -1,0 +1,54 @@
+{
+  "employee": [
+    {
+      "full_name": "Yared Sebsbe",
+      "email": "yaredyh11@gmail.com",
+      "phone_number": "0989823399",
+      "company": "TwoF Capital",
+      "department": "DevOps Engineer",
+      "salary": 11000,
+      "id": "a13d"
+    },
+    {
+      "id": "e798",
+      "full_name": "Hagere Alemu",
+      "email": "hagere@gmail.com",
+      "phone_number": "0912345667",
+      "company": "Gacheb Ict Solutiolns",
+      "department": "DevOps Engineer",
+      "salary": 2500
+    }
+  ],
+  "company": [
+    {
+      "name": "TwoF Capital",
+      "department": [
+        "Full Stack Developer"
+      ],
+      "id": "ded7"
+    },
+    {
+      "name": "XOAK Tech",
+      "department": [
+        "Frontend Developer",
+        "Backend Developer"
+      ],
+      "id": "5ee7"
+    },
+    {
+      "id": "173b",
+      "name": "Gacheb Ict Solutiolns",
+      "department": [
+        "Web Administrator"
+      ]
+    },
+    {
+      "id": "7fe9",
+      "name": "Tankwa Server Management",
+      "department": [
+        "Full Stack Developer",
+        "DevOps Engineer"
+      ]
+    }
+  ]
+}

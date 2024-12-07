@@ -1,0 +1,22 @@
+<h2 class="main-title">Register Company</h2>
+<form [formGroup]="applyForm" (submit)="addCompany()" >
+    <div class="d-flex">
+        <div class="w-50 px-2">
+            <mat-form-field class="w-100">
+                <mat-label>Company Name</mat-label>
+                <input matInput formControlName="company_name">
+              </mat-form-field>
+        </div>
+        
+          <div class="w-50 px-2">
+              <mat-form-field class="w-100">
+                <mat-label>Department(press comma )</mat-label>
+                <input matInput formControlName="department" [(ngModel)]="theText" (keydown)="onKeyDown($event)">                
+              </mat-form-field>
+          </div>
+    </div>
+    <ul class="w-100 d-flex flex-column  align-items-end">
+      <li *ngFor="let department of departments" class="departments">{{department}}</li>
+    </ul>
+    <div class="d-flex justify-content-center"><button class="submit-btn" type="submit">Add Company</button></div>
+</form>
